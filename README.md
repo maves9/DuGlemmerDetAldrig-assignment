@@ -1,11 +1,12 @@
 # DuGlemmerDetAldrig-assignment
 
 ## tools
-* SASS
+* SASS/SCSS
 * Grunt
 * JQuery
 * node
 
 ## Get started
-* fork repository
-* run `npm start`
+* Download repository
+* run `npm install`
+* use `grunt` and `grunt build` for compiling SASS/SCSS and  JavaScript
