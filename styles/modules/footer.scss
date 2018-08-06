@@ -8,16 +8,16 @@ $theme-font-size: 1.2rem;
 $theme-font-size-big: 1.4rem;
 
 footer#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 50;
+  background: #fff;
+  font-size: $theme-font-size;
     .toggle-section{
-      max-height: calc(100vh - 62px);
+      max-height: 75vh;
       overflow: auto;
     }
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    z-index: 50;
-    background: #fff;
-    font-size: $theme-font-size;
     .footer-usp{
       overflow: auto;
       border-top: 1px solid $theme-color-light-grey;
@@ -54,21 +54,23 @@ footer#footer {
         border-top: 1px solid #b2b2b2;
         padding: 15px;
         position: relative;
+
+        .phone-support{
+          position: relative;
+          padding-left: 14px;
+          &::before{
+            padding-right: 14px;
+            font-size: 20px;
+            font-family: FontAwesome;
+            content: "\f007";
+          }
+        }
         .trustpilot{
-          overflow: hidden;
-          height: 30px;
-          display: block;
           img{
-            height: 122px;
-            margin-top: -100px;
-
-            $bootstrap-md-max: 575.98px;
-
-            @media screen and (max-width: $bootstrap-md-max) {
-                height: auto;
-                margin-top: -79px;
-                width: 100%;
-            }
+            width: 100%;
+            max-width: 250px;
+            display: block;
+            margin: auto;
           }
 
         }
