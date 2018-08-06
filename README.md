@@ -8,4 +8,4 @@
 
 ## Get started
 * fork repository
-* run ´npm start´
+* run `npm start`
