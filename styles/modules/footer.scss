@@ -1,0 +1,163 @@
+
+$theme-color-yellow: #e2912e;
+$theme-color-light-grey: #f3f3f3;
+$theme-color-green: #62bb62;
+
+$theme-font-color: #333;
+$theme-font-size: 1.2rem;
+$theme-font-size-big: 1.4rem;
+
+footer#footer {
+    .toggle-section{
+      max-height: calc(100vh - 62px);
+      overflow: auto;
+    }
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 50;
+    background: #fff;
+    font-size: $theme-font-size;
+    .footer-usp{
+      overflow: auto;
+      border-top: 1px solid $theme-color-light-grey;
+      border-bottom: 1px solid $theme-color-light-grey;
+      p{
+        margin-top: 10px;
+        font-size: $theme-font-size-big;
+      }
+      strong{
+        color: $theme-color-yellow;
+      }
+    }
+    button.footer-toggle-btn {
+      background: #fff;
+      border: #333 solid 1px;
+      border-radius: 4px;
+      padding: 8px;
+      padding-left: 28px;
+      padding-right: 14px;
+      position: absolute;
+      top: -20px;
+      left: 15px;
+      z-index: 100;
+      outline: 0;
+      &::after{
+        font-family: FontAwesome;
+        content: "\f0eb";
+        position: absolute;
+        left: 12px;
+      }
+      &.open::after{content: "\f00d";}
+    }
+    .visible-section{
+        border-top: 1px solid #b2b2b2;
+        padding: 15px;
+        position: relative;
+        .trustpilot{
+          overflow: hidden;
+          height: 30px;
+          display: block;
+          img{
+            height: 122px;
+            margin-top: -100px;
+
+            $bootstrap-md-max: 575.98px;
+
+            @media screen and (max-width: $bootstrap-md-max) {
+                height: auto;
+                margin-top: -79px;
+                width: 100%;
+            }
+          }
+
+        }
+        .chat-open{
+          position: relative;
+          &::after{
+            content: "";
+            border-radius: 100%;
+            position: absolute;
+            height: 4px;
+            width: 4px;
+            right: -8px;
+            top: 0;
+            background: $theme-color-green;
+          }
+        }
+    }
+    .section-headline{
+      font-size: $theme-font-size-big;
+      font-weight: 700;
+    }
+    li{
+      font-size: $theme-font-size;
+      line-height: 28px;
+    }
+    #footer-main{
+      padding-bottom: 20px;
+      .icon-list-item{
+        position: relative;
+        padding-left: 20px;
+        &::after{
+          position: absolute;
+          left: 0px;
+          font-family: FontAwesome;
+        }
+        &.email::after{ content: "\f003"; }
+        &.phone::after{ content: "\f095"; }
+      }
+      a{
+        color: $theme-font-color;
+        text-decoration: underline;
+      }
+    }
+    #footer-sub{
+      background: $theme-color-light-grey;
+      padding-bottom: 20px;
+      padding-top: 5px;
+
+      .collaborators{
+        .wrapper{
+          width: auto;
+          max-width: 320px;
+          img{
+            margin: 2.5px;
+            height: 25px;
+          }
+        }
+      }
+      .newsletter{
+        input[type="text"],
+        input[type="submit"]{
+          border: #333 solid 1px;
+          padding: 5px 8px;
+          border-radius: 4px;
+          outline: 0;
+        }
+        input[type="text"] {
+          background: transparent;
+        }
+        input[type="submit"] {
+          background: #fff;
+          margin-left: -10px;
+        }
+      }
+    }
+    #footer-social-media{
+      text-align: center;
+      a{
+        text-decoration: none;
+        color: $theme-font-color;
+        margin: 10px;
+        &::after{
+          font-family: FontAwesome;
+          font-size: 24px;
+        }
+      }
+      .instagram::after{ content: "\f16d" }
+      .facebook::after { content: "\f09a" }
+      .youtube::after  { content: "\f167" }
+      .linkedin::after { content: "\f0e1" }
+    }
+}
